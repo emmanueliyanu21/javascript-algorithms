@@ -19,10 +19,23 @@
 //     console.log(`${c} - ${index} - ${chars.indexOf(c)}`);
 // });
 
+// let chars = ['A', 'B', 'A', 'C', 'B'];
+
+// let uniqueChars = chars.filter((c, index) => {
+//     return chars.indexOf(c) === index;
+// });
+
+// console.log(uniqueChars);
+
+//Remove duplicates from an array using forEach() and include()
+
 let chars = ['A', 'B', 'A', 'C', 'B'];
 
-let uniqueChars = chars.filter((c, index) => {
-    return chars.indexOf(c) === index;
+let uniqueChars = [];
+chars.forEach((c) => {
+    if (!uniqueChars.includes(c)) {
+        uniqueChars.push(c);
+    }
 });
 
 console.log(uniqueChars);
