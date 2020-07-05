@@ -29,14 +29,36 @@
 
 //Remove duplicates from an array using forEach() and include()
 
-let chars = ['A', 'B', 'A', 'C', 'B'];
+// let chars = ['A', 'B', 'A', 'C', 'B'];
 
-let uniqueChars = [];
-chars.forEach((c) => {
-    if (!uniqueChars.includes(c)) {
-        uniqueChars.push(c);
-    }
-});
+// let uniqueChars = [];
+// chars.forEach((c) => {
+//     if (!uniqueChars.includes(c)) {
+//         uniqueChars.push(c);
+//     }
+// });
 
-console.log(uniqueChars);
+// console.log(uniqueChars);
+
+// Merge objects using the spread operator (...)
+
+let person = {
+    firstName: 'John',
+    lastName: 'Doe',
+    age: 25,
+    ssn: '123-456-2356'
+};
+
+
+let job = {
+    jobTitle: 'JavaScript Developer',
+    location: 'USA'
+};
+
+let employee = {
+    ...person,
+    ...job
+};
+
+console.log(employee);
 
